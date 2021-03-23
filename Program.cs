@@ -4,7 +4,7 @@ namespace Boxing_Logic
 {
     class Program
     {
-        static int tableWidth = 73;
+        static int tableWidth = 113;
 
         static void Main(string[] args)
         {
@@ -23,7 +23,7 @@ namespace Boxing_Logic
             int scoreBoxer2_1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("");
 
-            Console.WriteLine("Boxer1 score: " + scoreBoxer1_1 + "; Boxer2 score " + scoreBoxer2_1 + "\n");
+            Console.WriteLine("Boxer1 score: " + scoreBoxer1_1 + "; Boxer2 score: " + scoreBoxer2_1 + "\n");
             Console.WriteLine("");
 
             {
