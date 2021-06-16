@@ -14,11 +14,10 @@ namespace Boxing_Logic
             options.Add("9");
             options.Add("10");
 
-            Console.WriteLine("Do something!");
             string scoreBoxer1_1_str = Validation.StringOptions("Round #1: Boxer1 score: 10 or 9?", options);
 
             int scoreBoxer1_1 = Convert.ToInt32(scoreBoxer1_1_str);
-            Console.WriteLine("");
+           // Console.WriteLine($"use me: {scoreBoxer1_1}");
 
             string scoreBoxer2_1_str = Validation.StringOptions("Round #1: Boxer2 score: 10 or 9?", options);
 
@@ -30,7 +29,15 @@ namespace Boxing_Logic
             string round1Result = DetermineWinnerRound_Overall.DisplayRoundWinner(scoreBoxer1_1, scoreBoxer2_1, 1);
             Console.WriteLine(round1Result);
             Console.ReadLine();
+            
         }
-       
+        public static string R1DisplayScore()
+        {
+            string round1Display1 = "67";
+            
+            return round1Display1;
+        }
+
+
     }
 }
