@@ -4,9 +4,9 @@ using System.IO;
 
 namespace Boxing_Logic
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Greeting.Instruction1();
             Greeting.Instruction2();
@@ -62,7 +62,6 @@ namespace Boxing_Logic
             
             Console.WriteLine("");
            
-
             string scoreBoxer2_3_str = Validation.StringOptions("Round #3: Boxer2 score: 10 or 9?", options);
 
             int scoreBoxer2_3 = Convert.ToInt32(scoreBoxer2_3_str);
@@ -74,17 +73,15 @@ namespace Boxing_Logic
             Console.ReadLine();
             
             Console.Clear();
-            
+            //Overall Winner
                
                 int x = scoreBoxer1_1 + scoreBoxer1_2 + scoreBoxer1_3;
                 int y = scoreBoxer2_1 + scoreBoxer2_2 + scoreBoxer2_3;
-            Console.WriteLine("Overall Winner:");
-            string overallWinner = DetermineWinnerRound_Overall.DisplayOverallWinner(y, x); 
+            
+            string overallWinner = DetermineWinnerRound_Overall.DisplayOverallWinner(x, y); 
             Console.WriteLine(overallWinner);
            
                 Console.ReadLine();
-            
-
             {
                 int x_1 = scoreBoxer1_1;
                 int x_2 = scoreBoxer1_2;
@@ -102,7 +99,7 @@ namespace Boxing_Logic
                 PrintTable.PrintRow("" + x_1, "" + x_2, "" + x_3, "" + x_7);
                 PrintTable.PrintRow("" + x_4, "" + x_5, "" + x_6, "" + x_8);
                 PrintTable.PrintLine();
-                
+
                 Console.ReadLine();
             }
         }

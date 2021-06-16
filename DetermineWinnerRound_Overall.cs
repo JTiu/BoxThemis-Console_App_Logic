@@ -24,14 +24,15 @@ namespace Boxing_Logic
         }
         public static string DisplayOverallWinner(int aggregateboxer1Score, int aggregateboxer2Score)
         {
+            Console.WriteLine("Overall Winner of this match:");
             if (aggregateboxer1Score > aggregateboxer2Score)
             {
-                return "Boxer 1 wins match hewre";
+                return "Boxer 1 wins match";
                
             }
             else if (aggregateboxer1Score < aggregateboxer2Score)
             {
-                return "Boxer 2 wins match mmm";
+                return "Boxer 2 wins match";
                 
             }
             else if (aggregateboxer1Score == aggregateboxer2Score)
