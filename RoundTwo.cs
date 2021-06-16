@@ -6,7 +6,7 @@ namespace Boxing_Logic
 {
     public static class RoundTwo
     {
-        public static void SomethingMethod()
+        public static void R2Method()
         {
             List<string> options = new List<string>();
             options.Add("7");
