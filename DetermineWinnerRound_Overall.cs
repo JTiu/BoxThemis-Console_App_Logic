@@ -4,18 +4,18 @@ using System.Text;
 
 namespace Boxing_Logic
 {
-    public static class DetermineWinner
+    public static class DetermineWinnerRound_Overall
     {
 
         public static string DisplayRoundWinner(int boxer1Score, int boxer2Score, int round)
         {
             if(boxer1Score > boxer2Score)
             {
-                return $"Boxer 1 wins round: {round}";
+                return $"Boxer 1 wins round {round}";
             }
             else if(boxer1Score < boxer2Score)
             {
-                return $"Boxer 2 wins round: {round}";
+                return $"Boxer 2 wins round {round}";
             }
             else
             {
@@ -26,11 +26,13 @@ namespace Boxing_Logic
         {
             if (aggregateboxer1Score > aggregateboxer2Score)
             {
-                return "Boxer 1 wins match";
+                return "Boxer 1 wins match hewre";
+               
             }
             else if (aggregateboxer1Score < aggregateboxer2Score)
             {
-                return "Boxer 2 wins match";
+                return "Boxer 2 wins match mmm";
+                
             }
             else if (aggregateboxer1Score == aggregateboxer2Score)
             {

@@ -31,14 +31,12 @@ namespace Boxing_Logic
 
             Console.WriteLine("Boxer1 score: " + scoreBoxer1_1 + "; Boxer2 score: " + scoreBoxer2_1 + "\n");
             Console.WriteLine("");
-            string round1Result = DetermineWinner.DisplayRoundWinner(scoreBoxer1_1, scoreBoxer2_1, 11);
+            string round1Result = DetermineWinnerRound_Overall.DisplayRoundWinner(scoreBoxer1_1, scoreBoxer2_1, 1);
             Console.WriteLine(round1Result);
             Console.ReadLine();
             Console.Clear();
+            
             //Round 2
-           
-            Console.WriteLine("");
-
             string scoreBoxer1_2_str = Validation.StringOptions("Round #2: Boxer1 score: 10 or 9?", options);
 
             int scoreBoxer1_2 = Convert.ToInt32(scoreBoxer1_2_str);
@@ -49,28 +47,21 @@ namespace Boxing_Logic
             Console.WriteLine("");
 
             Console.WriteLine("Boxer1 score: " + scoreBoxer1_2 + "; Boxer2 score " + scoreBoxer2_1);
+            string round2Result = DetermineWinnerRound_Overall.DisplayRoundWinner(scoreBoxer1_2, scoreBoxer2_2, 2);
+            Console.WriteLine(round2Result);
             Console.WriteLine("");
+            Console.ReadLine();
 
-            {
-                if (scoreBoxer1_2 > scoreBoxer2_2)
-                {
-                    Console.WriteLine("Boxer1 won Round#2!");
-                }
-                else
-                {
-                    Console.WriteLine("Player2 won Round#2");
-                }
-            }
+            
             Console.Clear();
-           
-            Console.WriteLine("");
+          //Round 3
 
             string scoreBoxer1_3_str = Validation.StringOptions("Round #3: Boxer1 score: 10 or 9?", options);
 
             int scoreBoxer1_3 = Convert.ToInt32(scoreBoxer1_3_str);
+            
             Console.WriteLine("");
-
-            Console.WriteLine("");
+           
 
             string scoreBoxer2_3_str = Validation.StringOptions("Round #3: Boxer2 score: 10 or 9?", options);
 
@@ -78,36 +69,21 @@ namespace Boxing_Logic
             Console.WriteLine("");
 
             Console.WriteLine("Boxer1 score: " + scoreBoxer1_3 + "; Boxer2 score " + scoreBoxer2_3);
-            Console.WriteLine("");
+            string round3Result = DetermineWinnerRound_Overall.DisplayRoundWinner(scoreBoxer1_3, scoreBoxer2_3, 3);
+            Console.WriteLine(round3Result);
             Console.ReadLine();
-            {
-                
-                if (scoreBoxer1_3 > scoreBoxer2_3)
-                {
-                    Console.WriteLine("Boxer1 won Round#3!");
-                }
-                else
-                {
-                    Console.WriteLine("Player2 won Round#3");
-                }
-
-            }
+            
             Console.Clear();
-            {
-                Console.WriteLine("Let's determine the winner of the match:\n");
+            
+               
                 int x = scoreBoxer1_1 + scoreBoxer1_2 + scoreBoxer1_3;
                 int y = scoreBoxer2_1 + scoreBoxer2_2 + scoreBoxer2_3;
-                
-                if (x > y)
-                {
-                    Console.WriteLine("Boxer1's score = " + x + "\n\nBoxer2's score = " + y + "\n\nBoxer1 wins!");
-                }
-                else
-                {
-                    Console.WriteLine("Boxer1's score = " + x + "\n\nBoxer2's score = " + y + "\n\nBoxer2 wins!");
-                    Console.WriteLine("\n");
-                }
-            }
+            Console.WriteLine("Overall Winner:");
+            string overallWinner = DetermineWinnerRound_Overall.DisplayOverallWinner(y, x); 
+            Console.WriteLine(overallWinner);
+           
+                Console.ReadLine();
+            
 
             {
                 int x_1 = scoreBoxer1_1;
