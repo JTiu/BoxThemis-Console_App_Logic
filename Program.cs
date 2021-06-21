@@ -9,7 +9,6 @@ namespace Boxing_Logic
         public static void Main(string[] args)
         { 
             
-            
             Greeting.Instruction1();
             Greeting.Instruction2();
 
@@ -18,8 +17,8 @@ namespace Boxing_Logic
             RoundTwo.R2Method();
             RoundThree.R3Method();
             {
-                string x_1 = RoundOne.R1DisplayScore();
-                
+               // string x_1 = RoundOne.R1Method();
+                //string x_2 = RoundTwo.R2Method();
                 //int x_2 = scoreBoxer1_2;
                 //int x_3 = scoreBoxer1_3;
                 //int x_4 = scoreBoxer2_1;
@@ -32,9 +31,9 @@ namespace Boxing_Logic
                 Console.ReadLine();
 
                 PrintTable.PrintLine();
-                PrintTable.PrintRow(x_1, "Round 2", "Round 3", "Total");
+                PrintTable.PrintRow("Round 1", "Round 2", "Round 3", "Total");
                 PrintTable.PrintLine();
-                PrintTable.PrintRow("" + "X", "" + "Y", "" + "Z", "" + "M");
+                PrintTable.PrintRow("" + "67", "" + "70", "" + "Z", "" + "M");
                 //PrintTable.PrintRow("" + x_4, "" + x_5, "" + x_6, "" + x_8);
                 PrintTable.PrintLine();
 

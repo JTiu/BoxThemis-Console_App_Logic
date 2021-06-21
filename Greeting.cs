@@ -12,7 +12,7 @@ namespace Boxing_Logic
         }
         public static void Instruction2()
         {
-            Console.WriteLine("\nThe Boxer who wins the round gets '10', the Boxer who loses the round gets a '9'.\n \nAre you ready to begin? ");
+            Console.WriteLine("\nThe Boxer who wins the round gets '10', the Boxer who loses the round gets a '9'.");
             Console.WriteLine("");
         }
     }

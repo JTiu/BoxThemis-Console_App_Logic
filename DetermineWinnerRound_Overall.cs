@@ -11,15 +11,15 @@ namespace Boxing_Logic
         {
             if(boxer1Score > boxer2Score)
             {
-                return $"Boxer 1 wins round {round}";
+                return $"Boxer 1 wins round #{round}";
             }
             else if(boxer1Score < boxer2Score)
             {
-                return $"Boxer 2 wins round {round}";
+                return $"Boxer 2 wins round #{round}";
             }
             else
             {
-                return $"Tied round: {round}";
+                return $"Tied round #{round}";
             }
         }
         public static string DisplayOverallWinner(int aggregateboxer1Score, int aggregateboxer2Score)

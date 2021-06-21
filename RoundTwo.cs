@@ -6,7 +6,7 @@ namespace Boxing_Logic
 {
     public static class RoundTwo
     {
-        public static void R2Method()
+        public static string R2Method()
         {
             List<string> options = new List<string>();
             options.Add("7");
@@ -28,7 +28,10 @@ namespace Boxing_Logic
             Console.WriteLine(round2Result);
             Console.WriteLine("");
             Console.ReadLine();
+            string round1Display1 = scoreBoxer1_2_str;
+            string round1Display2 = scoreBoxer2_2_str;
 
+            return round1Display1;
         }
 
     }
