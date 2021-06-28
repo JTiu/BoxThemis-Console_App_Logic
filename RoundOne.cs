@@ -6,8 +6,11 @@ namespace Boxing_Logic
 {
     public static class RoundOne
     {
-        public static string R1Method()
+        public static RoundResult R1Method() //this method will return a instance from the RoundResult class, need to change Round two and three
         {
+
+            RoundResult roundResult = new RoundResult(); //this is the instance.  I initialize this instance
+            
             List<string> options = new List<string>();
             options.Add("7");
             options.Add("8");
@@ -29,10 +32,13 @@ namespace Boxing_Logic
             string round1Result = DetermineWinnerRound_Overall.DisplayRoundWinner(scoreBoxer1_1, scoreBoxer2_1, 1);
             Console.WriteLine(round1Result);
             Console.ReadLine();
-            string round1Display1 = scoreBoxer1_1_str;
-            string round1Display2 = scoreBoxer2_1_str;
             
-            return round1Display1;
+
+            roundResult.Boxer1Score = scoreBoxer1_1;
+            roundResult.Boxer2Score = scoreBoxer2_1;
+
+
+            return roundResult;
             
         }
         
