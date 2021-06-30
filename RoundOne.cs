@@ -18,17 +18,16 @@ namespace Boxing_Logic
             options.Add("10");
 
 
-            //BoxerName_Weight useBoxerName_Weight = new BoxerName_Weight();
-            //useBoxerName_Weight.NameBoxer1 = Validation.String(BoxerName_Weight.DisplayName()); ;
+            
             BoxerName_Weight useName = new BoxerName_Weight();
             useName.NameBoxer1 = "Marty";
 
-            string scoreBoxer1_1_str = Validation.StringOptions($"Round #1: {useName.NameBoxer1}'s score: 10 or 9?", options);
+            string scoreBoxer1_1_str = Validation.StringOptions($"Round #1: {useName.NameBoxer1}'s score: 10 or 9?", options);//#here
 
             int scoreBoxer1_1 = Convert.ToInt32(scoreBoxer1_1_str);
           
 
-            string scoreBoxer2_1_str = Validation.StringOptions($"Round #1: {BoxerName_Weight.DisplayName()}'s score: 10 or 9?", options);
+            string scoreBoxer2_1_str = Validation.StringOptions($"Round #1: {BoxerName_Weight.DisplayName()}'s score: 10 or 9?", options);//#here
 
             int scoreBoxer2_1 = Convert.ToInt32(scoreBoxer2_1_str);
             Console.WriteLine("");
