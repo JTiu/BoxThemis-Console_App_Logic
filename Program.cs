@@ -20,7 +20,7 @@ namespace Boxing_Logic
 
             
 
-            RoundResult round1Result  =  RoundOne.R1Method(); //need to replicate for rounds two and three
+            RoundResult round1Result  =  RoundOne.R1Method(askBoxerName_Weight); //need to replicate for rounds two and three
            //RoundTwo.R2Method();
             //RoundThree.R3Method();
             {

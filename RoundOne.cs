@@ -6,7 +6,7 @@ namespace Boxing_Logic
 {
     public static class RoundOne
     {
-        public static RoundResult R1Method() //this method will return a instance from the RoundResult class, need to change Round two and three
+        public static RoundResult R1Method(BoxerName_Weight anyParamerNameIchoose) //this method will return a instance from the RoundResult class, need to change Round two and three
         {
 
             RoundResult roundResult = new RoundResult(); //this is the instance.  I initialize this instance
@@ -19,15 +19,14 @@ namespace Boxing_Logic
 
 
             
-            BoxerName_Weight useName = new BoxerName_Weight();
-            useName.NameBoxer1 = "Marty";
+           
 
-            string scoreBoxer1_1_str = Validation.StringOptions($"Round #1: {useName.NameBoxer1}'s score: 10 or 9?", options);//#here
+            string scoreBoxer1_1_str = Validation.StringOptions($"Round #1: {anyParamerNameIchoose.NameBoxer1}'s score: 10 or 9?", options);//#here
 
             int scoreBoxer1_1 = Convert.ToInt32(scoreBoxer1_1_str);
           
 
-            string scoreBoxer2_1_str = Validation.StringOptions($"Round #1: {BoxerName_Weight.DisplayName()}'s score: 10 or 9?", options);//#here
+            string scoreBoxer2_1_str = Validation.StringOptions($"Round #1: {anyParamerNameIchoose.NameBoxer2}'s score: 10 or 9?", options);//#here
 
             int scoreBoxer2_1 = Convert.ToInt32(scoreBoxer2_1_str);
             Console.WriteLine("");
