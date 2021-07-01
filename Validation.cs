@@ -34,7 +34,10 @@ public static string StringOptions (string prompt, List <string> options)
                 return String(prompt);
             }
         }
-        
 
+        public static string StringState(string prompt, string statement)
+        {
+            return prompt + statement;
+        }
     }
 }

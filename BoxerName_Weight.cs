@@ -11,6 +11,8 @@ namespace Boxing_Logic
         public string WeightBoxer1 { get; set; }
         public string WeightBoxer2 { get; set; }
 
-        
+        public string RecordBoxer1 { get; set; }
+
+
     }
 }

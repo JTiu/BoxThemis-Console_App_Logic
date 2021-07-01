@@ -17,7 +17,7 @@ namespace Boxing_Logic
             askBoxerName_Weight.NameBoxer2 = Validation.String("What is boxer two's name?");
             askBoxerName_Weight.WeightBoxer1 = Validation.String($"What is {askBoxerName_Weight.NameBoxer1}'s weight?");
            askBoxerName_Weight.WeightBoxer2 = Validation.String($"What is {askBoxerName_Weight.NameBoxer2}'s weight?");
-
+            askBoxerName_Weight.RecordBoxer1 = Validation.String($"What is record? {askBoxerName_Weight.RecordBoxer1}");
             
 
             RoundResult round1Result  =  RoundOne.R1Method(askBoxerName_Weight); //need to replicate for rounds two and three
