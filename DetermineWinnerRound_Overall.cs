@@ -4,24 +4,10 @@ using System.Text;
 
 namespace Boxing_Logic
 {
-    public static class DetermineWinnerRound_Overall
+    public class DetermineWinnerRound_Overall 
     {
-
-        public static string DisplayRoundWinner(int boxer1Score, int boxer2Score, int round)
-        {
-            if(boxer1Score > boxer2Score)
-            {
-                return $"Boxer 1 wins round #{round}";
-            }
-            else if(boxer1Score < boxer2Score)
-            {
-                return $"Boxer 2 wins round #{round}";
-            }
-            else
-            {
-                return $"Tied round #{round}";
-            }
-        }
+        
+       
         public static string DisplayOverallWinner(int aggregateboxer1Score, int aggregateboxer2Score)
         {
             Console.WriteLine("Overall Winner of this match:");

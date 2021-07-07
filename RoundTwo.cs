@@ -24,8 +24,8 @@ namespace Boxing_Logic
             Console.WriteLine("");
 
             //Console.WriteLine("Boxer1 score: " + scoreBoxer1_2 + "; Boxer2 score " + scoreBoxer2_1);
-            string round2Result = DetermineWinnerRound_Overall.DisplayRoundWinner(scoreBoxer1_2, scoreBoxer2_2, 2);
-            Console.WriteLine(round2Result);
+          //  string round2Result = DetermineWinnerRound_Overall.DisplayRoundWinner(scoreBoxer1_2, scoreBoxer2_2, 2, "M");
+            //Console.WriteLine(round2Result);
             Console.WriteLine("");
             Console.ReadLine();
             string round1Display1 = scoreBoxer1_2_str;

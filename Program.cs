@@ -9,32 +9,37 @@ namespace Boxing_Logic
         public static void Main(string[] args)
         { 
             
-            Greeting.Instruction1();
-            Greeting.Instruction2();
+            //Greeting.Instruction1();
+           // Greeting.Instruction2();
 
-            BoxerName_Weight askBoxerName_Weight = new BoxerName_Weight();
-           askBoxerName_Weight.NameBoxer1 = Validation.String("What is boxer one's name?");
-            askBoxerName_Weight.NameBoxer2 = Validation.String("What is boxer two's name?");
-            askBoxerName_Weight.WeightBoxer1 = Validation.String($"What is {askBoxerName_Weight.NameBoxer1}'s weight?");
-           askBoxerName_Weight.WeightBoxer2 = Validation.String($"What is {askBoxerName_Weight.NameBoxer2}'s weight?");
-            askBoxerName_Weight.RecordBoxer1 = Validation.String($"What is record? {askBoxerName_Weight.RecordBoxer1}");
-            
+            BoxerName_Weight_Record askBoxerName_WeightRecord = new BoxerName_Weight_Record();
+           askBoxerName_WeightRecord.NameBoxer1 = Validation.String("What is boxer one's name?");
+           askBoxerName_WeightRecord.NameBoxer2 = Validation.String("What is boxer two's name?");
+           // askBoxerName_WeightRecord.WeightBoxer1 = Validation.String($"What is {askBoxerName_WeightRecord.NameBoxer1}'s weight?");
+           //askBoxerName_WeightRecord.WeightBoxer2 = Validation.String($"What is {askBoxerName_WeightRecord.NameBoxer2}'s weight?");
+           // askBoxerName_WeightRecord.WinsBoxer1 = Validation.String($"How many wins on {askBoxerName_WeightRecord.NameBoxer1}'s record? {askBoxerName_WeightRecord.WinsBoxer1}");
+           // askBoxerName_WeightRecord.WinsBoxer1 = Validation.String($"How many wins on {askBoxerName_WeightRecord.NameBoxer2}'s record? {askBoxerName_WeightRecord.WinsBoxer2}");
+           // askBoxerName_WeightRecord.WinsBoxer1 = Validation.String($"How many losses on {askBoxerName_WeightRecord.NameBoxer1}'s record? {askBoxerName_WeightRecord.LossesBoxer1}");
+           // askBoxerName_WeightRecord.WinsBoxer1 = Validation.String($"How many losses on {askBoxerName_WeightRecord.NameBoxer2}'s record? {askBoxerName_WeightRecord.LossesBoxer2}");
+           // askBoxerName_WeightRecord.WinsBoxer1 = Validation.String($"How many KO's on {askBoxerName_WeightRecord.NameBoxer1}'s record? {askBoxerName_WeightRecord.KOBoxer1}");
+           // askBoxerName_WeightRecord.WinsBoxer1 = Validation.String($"How many KO's on {askBoxerName_WeightRecord.NameBoxer2}'s record? {askBoxerName_WeightRecord.KOBoxer2}");
 
-            RoundResult round1Result  =  RoundOne.R1Method(askBoxerName_Weight); //need to replicate for rounds two and three
+
+
+            RoundResult round1Result  =  RoundOne.R1Method(askBoxerName_WeightRecord); //need to replicate for rounds two and three
            //RoundTwo.R2Method();
             //RoundThree.R3Method();
             {
                 
                 PrintTable.PrintLine();
-                PrintTable.PrintRow(   "BoxerName", "Boxer Weight", "Round 1", "Round 2", "Round 3", "Total");
+                PrintTable.PrintRow(   "BoxerName", "Boxer Weight", "Wins", "Losses", "KO's");
                 PrintTable.PrintLine();
-                PrintTable.PrintRow(askBoxerName_Weight.NameBoxer1, askBoxerName_Weight.WeightBoxer1, round1Result.Boxer1Score.ToString(), "99", "Z", "M"); ;
+                ////PrintTable.PrintRow(askBoxerName_WeightRecord.NameBoxer1, askBoxerName_WeightRecord.WeightBoxer1, askBoxerName_WeightRecord.WinsBoxer1, askBoxerName_WeightRecord.LossesBoxer1, askBoxerName_WeightRecord.KOBoxer1);
                
                 PrintTable.PrintLine();
                 PrintTable.PrintLine();
-                PrintTable.PrintRow("BoxerName", "Boxer Weight", "Round 1", "Round 2", "Round 3", "Total");
                 PrintTable.PrintLine();
-                PrintTable.PrintRow(askBoxerName_Weight.NameBoxer2, askBoxerName_Weight.WeightBoxer2, round1Result.Boxer2Score.ToString(), "77", "Z", "M");
+                //PrintTable.PrintRow(askBoxerName_WeightRecord.NameBoxer2, askBoxerName_WeightRecord.WeightBoxer2, askBoxerName_WeightRecord.WinsBoxer2, askBoxerName_WeightRecord.LossesBoxer2, askBoxerName_WeightRecord.KOBoxer2);
                 //PrintTable.PrintRow("" + x_4, "" + x_5, "" + x_6, "" + x_8);
                 PrintTable.PrintLine();
                 Console.ReadLine();

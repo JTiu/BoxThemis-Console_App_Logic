@@ -6,43 +6,57 @@ namespace Boxing_Logic
 {
     public static class RoundOne
     {
-        public static RoundResult R1Method(BoxerName_Weight anyParamerNameIchoose) //this method will return a instance from the RoundResult class, need to change Round two and three
+        public static RoundResult R1Method(BoxerName_Weight_Record anyParamerNameIchoose) //this method will return a instance from the RoundResult class, need to change Round two and three
         {
 
             RoundResult roundResult = new RoundResult(); //this is the instance.  I initialize this instance
             
             List<string> options = new List<string>();
+            options.Add("0");
+            options.Add("1");
+            options.Add("2");
+            options.Add("3");
+            options.Add("4");
+            options.Add("5");
+            options.Add("6");
             options.Add("7");
             options.Add("8");
             options.Add("9");
             options.Add("10");
 
-
-            
-           
-
-            string scoreBoxer1_1_str = Validation.StringOptions($"Round #1: {anyParamerNameIchoose.NameBoxer1}'s score: 10 or 9?", options);//#here
+            string scoreBoxer1_1_str = Validation.StringOptions($"Round #1: {anyParamerNameIchoose.NameBoxer1}'s score: 10 or 9?", options);
             string scoreBoxer2_1_str = Validation.StringOptions($"Round #1: {anyParamerNameIchoose.NameBoxer2}'s score: 10 or 9?", options);
-            int scoreBoxer1_1 = Convert.ToInt32(scoreBoxer1_1_str);
-
+            string deductionsBoxer1_1_str = Validation.StringOptions($"Round #1: {anyParamerNameIchoose.NameBoxer1}'s deductions?", options);
+            string deductionsBoxer2_1_str = Validation.StringOptions($"Round #1: {anyParamerNameIchoose.NameBoxer2}'s deductions?", options);
             
-            string anotherStatement = Validation.StringOptions($"Record: {anyParamerNameIchoose.RecordBoxer1}'s KO's:", options);//#here
-
+            int scoreBoxer1_1 = Convert.ToInt32(scoreBoxer1_1_str);
             int scoreBoxer2_1 = Convert.ToInt32(scoreBoxer2_1_str);
             Console.WriteLine("");
 
-            Console.WriteLine("Boxer1 score: " + scoreBoxer1_1 + "; Boxer2 score: " + scoreBoxer2_1 + "\n" + anotherStatement);
+            Console.WriteLine($"{anyParamerNameIchoose.NameBoxer1}'s score: " + scoreBoxer1_1 + $"\n{anyParamerNameIchoose.NameBoxer2}'s score: " + scoreBoxer2_1);
+            Console.WriteLine($"Deductions: {anyParamerNameIchoose.NameBoxer1}: {deductionsBoxer1_1_str}, {anyParamerNameIchoose.NameBoxer2}: {deductionsBoxer2_1_str}");
             Console.WriteLine("");
-            string round1Result = DetermineWinnerRound_Overall.DisplayRoundWinner(scoreBoxer1_1, scoreBoxer2_1, 1);
-            Console.WriteLine(round1Result);
+           // string round1Result = DetermineWinnerRound_Overall.DisplayRoundWinner(scoreBoxer1_1, scoreBoxer2_1, 1);
+           // Console.WriteLine(round1Result);
             Console.ReadLine();
-            
 
             roundResult.Boxer1Score = scoreBoxer1_1;
             roundResult.Boxer2Score = scoreBoxer2_1;
-           
 
-            return roundResult;
+            if (scoreBoxer1_1 > scoreBoxer2_1)
+            {
+                Console.WriteLine($"{anyParamerNameIchoose.NameBoxer1} wins round 1");
+            }
+            else if (scoreBoxer1_1 < scoreBoxer2_1)
+            {
+                Console.WriteLine($"{anyParamerNameIchoose.NameBoxer2} wins round 1");
+            }
+            else
+            {
+                Console.WriteLine("Tied round #1");
+            }
+
+            return roundResult; 
             
         }
         
