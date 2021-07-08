@@ -36,24 +36,23 @@ namespace Boxing_Logic
             Console.WriteLine($"{anyParamerNameIchoose.NameBoxer1}'s score: " + scoreBoxer1_1 + $"\n{anyParamerNameIchoose.NameBoxer2}'s score: " + scoreBoxer2_1);
             Console.WriteLine($"Deductions: {anyParamerNameIchoose.NameBoxer1}: {deductionsBoxer1_1_str}, {anyParamerNameIchoose.NameBoxer2}: {deductionsBoxer2_1_str}");
             Console.WriteLine("");
-           // string round1Result = DetermineWinnerRound_Overall.DisplayRoundWinner(scoreBoxer1_1, scoreBoxer2_1, 1);
-           // Console.WriteLine(round1Result);
-            Console.ReadLine();
+           
+           
 
             roundResult.Boxer1Score = scoreBoxer1_1;
             roundResult.Boxer2Score = scoreBoxer2_1;
 
             if (scoreBoxer1_1 > scoreBoxer2_1)
             {
-                Console.WriteLine($"{anyParamerNameIchoose.NameBoxer1} wins round 1");
+                Console.WriteLine($"{anyParamerNameIchoose.NameBoxer1} wins round 1\n");
             }
             else if (scoreBoxer1_1 < scoreBoxer2_1)
             {
-                Console.WriteLine($"{anyParamerNameIchoose.NameBoxer2} wins round 1");
+                Console.WriteLine($"{anyParamerNameIchoose.NameBoxer2} wins round 1\n");
             }
             else
             {
-                Console.WriteLine("Tied round #1");
+                Console.WriteLine("Tied round #1\n");
             }
 
             return roundResult; 
