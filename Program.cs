@@ -29,17 +29,17 @@ namespace Boxing_Logic
             PrintTable.PrintLine();
             PrintTable.PrintRow(askBoxerName_WeightRecord.NameBoxer2, askBoxerName_WeightRecord.WeightBoxer2, askBoxerName_WeightRecord.WinsBoxer2, askBoxerName_WeightRecord.LossesBoxer2, askBoxerName_WeightRecord.KOBoxer2);
             PrintTable.PrintLine();
+            Console.WriteLine();
+            RoundResult round1Result = RoundOne.R1Method(askBoxerName_WeightRecord);
+            Console.ReadLine();
+            Console.Clear();
+            RoundResult round2Result = RoundTwo.R2Method(askBoxerName_WeightRecord);
+            Console.ReadLine();
+            Console.Clear();
+            RoundResult round3Result = RoundThree.R3Method(askBoxerName_WeightRecord);
+            Console.ReadLine();
+            Console.Clear();
 
-            RoundResult round1Result = RoundOne.R1Method(askBoxerName_WeightRecord); //need to replicate for rounds two and three
-            Console.ReadLine();
-            Console.Clear();
-            RoundResult round2Result = RoundTwo.R2Method(askBoxerName_WeightRecord); //need to replicate for rounds two and three
-            Console.ReadLine();
-            Console.Clear();
-            RoundResult round3Result = RoundThree.R3Method(askBoxerName_WeightRecord); //need to replicate for rounds two and three
-            Console.ReadLine();
-            Console.Clear();
-            //string x1 = round1Result.ToString();
 
             string B1R1 = round1Result.Boxer1Score.ToString();
             string B1R2 = round2Result.Boxer1Score.ToString();
@@ -51,6 +51,16 @@ namespace Boxing_Logic
             string B1TotalString = B1Total.ToString();
             int B2Total = round1Result.Boxer2Score + round2Result.Boxer2Score + round3Result.Boxer2Score;
             string B2TotalString = B2Total.ToString();
+
+            if (B1Total > B2Total)
+            {
+                Console.WriteLine(askBoxerName_WeightRecord.NameBoxer1 + " wins this match, let's look at the scorecard");
+            }
+            if (B1Total < B2Total)
+            {
+                Console.WriteLine(askBoxerName_WeightRecord.NameBoxer2 + " wins this match, let's look at the scorecard");
+            }
+
             PrintTable.PrintLine();
             PrintTable.PrintRow("", "Round 1", "Round 2", "Round Three", "Total");
             PrintTable.PrintLine();
@@ -58,14 +68,8 @@ namespace Boxing_Logic
             PrintTable.PrintLine();
             PrintTable.PrintRow(askBoxerName_WeightRecord.NameBoxer2, B2R1, B2R2, B2R3, B2TotalString);
             PrintTable.PrintLine();
-            {
+            Console.ReadLine();
 
-
-                //PrintTable.PrintRow("" + x_4, "" + x_5, "" + x_6, "" + x_8);
-                PrintTable.PrintLine();
-                Console.ReadLine();
-
-            }
         }
     }
 }
