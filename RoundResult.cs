@@ -14,7 +14,7 @@ namespace Boxing_Logic
         public int Winner { get; set; }
         public int Loser { get; set; }
 
-
+        public string Hello  { get; set; }
 
 
 
