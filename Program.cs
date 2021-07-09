@@ -39,13 +39,24 @@ namespace Boxing_Logic
             RoundResult round3Result = RoundThree.R3Method(askBoxerName_WeightRecord); //need to replicate for rounds two and three
             Console.ReadLine();
             Console.Clear();
-            string x1 = round1Result.ToString();
+            //string x1 = round1Result.ToString();
+
+            string B1R1 = round1Result.Boxer1Score.ToString();
+            string B1R2 = round2Result.Boxer1Score.ToString();
+            string B1R3 = round3Result.Boxer1Score.ToString();
+            string B2R1 = round1Result.Boxer2Score.ToString();
+            string B2R2 = round2Result.Boxer2Score.ToString();
+            string B2R3 = round3Result.Boxer2Score.ToString();
+            int B1Total = round1Result.Boxer1Score + round2Result.Boxer1Score + round3Result.Boxer1Score;
+            string B1TotalString = B1Total.ToString();
+            int B2Total = round1Result.Boxer2Score + round2Result.Boxer2Score + round3Result.Boxer2Score;
+            string B2TotalString = B2Total.ToString();
             PrintTable.PrintLine();
             PrintTable.PrintRow("", "Round 1", "Round 2", "Round Three", "Total");
             PrintTable.PrintLine();
-            PrintTable.PrintRow(askBoxerName_WeightRecord.NameBoxer1, "9", "9", "10", "28");
+            PrintTable.PrintRow(askBoxerName_WeightRecord.NameBoxer1, B1R1, B1R2, B1R3, B1TotalString);
             PrintTable.PrintLine();
-            PrintTable.PrintRow(askBoxerName_WeightRecord.NameBoxer2, "10", "10", "9", "29");
+            PrintTable.PrintRow(askBoxerName_WeightRecord.NameBoxer2, B2R1, B2R2, B2R3, B2TotalString);
             PrintTable.PrintLine();
             {
 
